@@ -1,0 +1,14 @@
+{
+    //this config file tells you which stuff we want to convert back to ES5
+    "presets": [
+        ["env", {
+            //we want to target the browswers on the last 5 versions and also with internet explorer with Internet Explorer version greater than 8
+            "targets": {
+                "browsers" : [
+                    "last 5 versions",
+                    "ie >= 8"
+                ]
+            }
+        }]
+    ]
+}
