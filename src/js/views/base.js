@@ -23,6 +23,10 @@ export const elements ={
 
     shopping: document.querySelector('.shopping__list'),
 
+    likesMenu:document.querySelector('.likes__field'),
+
+    likesList:document.querySelector('.likes__list'),
+
     //this is the dom element for the results list
     searchResList: document.querySelector('.results__list')
 

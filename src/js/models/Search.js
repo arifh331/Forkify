@@ -1,4 +1,6 @@
-//This is the model for the search functionality 
+//This is the model for the search functionality. This is not code for what the 
+//user visualizes but what happens in the back when the user searches for items
+//and how the results are reached
 
 import {proxy} from '../config';
 

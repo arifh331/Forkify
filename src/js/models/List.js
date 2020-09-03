@@ -1,4 +1,7 @@
-//This is the model of the shopping list or cart 
+//This is the model of the shopping list or cart. It is the 
+//code that details what happens in the background in reguards to 
+//the creation of the shopping list of ingredients
+//It also details how specific caluclations are conducted
 
 //a package that will help us create unique ids
 import uniqid from 'uniqid';
@@ -32,4 +35,4 @@ export default class List {
         //we go through the list of items and find the item with that id and then we can adjust the count properties
         this.items.find(el=>el.id === id).count = newCount;
     }
-}
+};

@@ -1,3 +1,9 @@
+//This is the file for the Search User Interface - Essentially 
+//how the user can type in a food or recipe name and results will pop-up
+//onto their screen
+//It will handles what happens when click on anything in the page that is related 
+//to the search results 
+
 //Importing all the DOM elements 
 import {elements} from'./base';
 
@@ -22,7 +28,7 @@ export const highlightSelected = id => {
     //using querry selector and turning the link to an active link which is basically 
     //the recipe we are clicking on will become active/ highlighted
     
-    document.querySelector(`a[href="#${id}"]`).classList.add('result__link--active');
+    document.querySelector(`.results__link[href="#${id}"]`).classList.add('result__link--active');
 };
 
 //This will clear the search results so the next results of the next search enter will have space 
@@ -35,7 +41,7 @@ export const clearResults= () => {
 
 //we want to make sure that the recipes presented don't have their titles 
 //take up too much space so we want to limit the size of the title 
-const limitRecipeTitle = (title, limit=17) =>{
+export const limitRecipeTitle = (title, limit=17) =>{
     //this is the newly constructed smaller title
     const newtitle=[];
     

@@ -1,3 +1,7 @@
+//This is the file for the Recipe Viewing User Inteface
+//When the user clicks on a specific Recipe, the specific ingredients 
+//will show up, properly formated on the user's screen
+
 //Importing all the DOM elements 
 import {elements} from'./base';
 
@@ -12,13 +16,15 @@ export const clearRecipe = () => {
 const formatCount = count => {
 
     if (count) {
+
+        const newCount= Math.round(count*10000) / 10000;
         //count 2.5 --> 2 1/2
         //so we are intializing two variables int, dec and they are going to be in the array. Basically 
         //our count value will be turned into a string and then we are going to split the value on the 
         //decimal point so that now in the array you have the whole number portion and the decimal view portion
         //and then map takes our array and does parseInt on these two portions which makes these two strings 
         //into ints again
-        const [int, dec] = count.toString().split('.').map(el=> parseInt(el,10));
+        const [int, dec] = newCount.toString().split('.').map(el=> parseInt(el,10));
         
         //Obviously if there is no decimal portion than you don't have to be in the business of trying to convert the 
         //count into more viewer friendly format so just return the count 
@@ -57,7 +63,7 @@ const createIngredient = ingredient => `
 
 `;
 
-export const renderRecipe = recipe => {
+export const renderRecipe = (recipe, isLiked) => {
     //template string containting all our recipe information
     const markup= `
             <figure class="recipe__fig">
@@ -97,7 +103,7 @@ export const renderRecipe = recipe => {
                 </div>
                 <button class="recipe__love">
                     <svg class="header__likes">
-                        <use href="img/icons.svg#icon-heart-outlined"></use>
+                        <use href="img/icons.svg#icon-heart${isLiked ? "": "-outlined"}"></use>
                     </svg>
                 </button>
             </div>
@@ -111,7 +117,7 @@ export const renderRecipe = recipe => {
                    
                 </ul>
 
-                <button class="btn-small recipe__btn">
+                <button class="btn-small recipe__btn--add">
                     <svg class="search__icon">
                         <use href="img/icons.svg#icon-shopping-cart"></use>
                     </svg>

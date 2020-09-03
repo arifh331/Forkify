@@ -1,3 +1,9 @@
+//This is the model for the "Recipes"
+//This file details what happens in the background when ingredients 
+//from a recipe is manipulated and how specifically the calculations are 
+//conducted
+
+
 import axios from "axios";
 
 import {proxy} from '../config';
