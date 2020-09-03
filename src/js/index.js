@@ -6,6 +6,9 @@
 // work seamlessly with the Models/ Aspect of the Web-Application 
 // where all the actual calculations and substantiation is happening
 
+//This is project was coded by Arif Howlader but it is also part of Jonas Schmedtmann's course 
+//on web-development. I also recieved alot of guidance from the forums of that web-development course
+
 //importing the search model
 import Search from './models/Search';
 
